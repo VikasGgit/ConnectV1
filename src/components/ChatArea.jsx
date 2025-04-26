@@ -167,7 +167,7 @@ const ChatArea = ({ chatUser }) => {
 
         {/* Input Field */}
         <Box sx={{ display: 'flex', alignItems: 'center', borderTop: '1px solid #ccc', padding: 1 }}>
-          <TextField
+          {/* <TextField
             fullWidth
             variant="filled"
             placeholder="Type a message..."
@@ -178,6 +178,25 @@ const ChatArea = ({ chatUser }) => {
             }}
             sx={{ borderRadius: 2 }}
           />
+           */}
+<TextField
+  fullWidth
+  variant="outlined"
+  size="small" // <-- Makes it smaller like chat input
+  placeholder="Type a message..."
+  value={newMessage}
+  onChange={(e) => setNewMessage(e.target.value)}
+  onKeyDown={(e) => {
+    if (e.key === 'Enter') handleSendMessage();
+  }}
+  sx={{
+    borderRadius: 2,
+    "& fieldset": {
+      borderRadius: 8,
+    },
+    backgroundColor: "#f5f5f5",
+  }}
+/>
           <IconButton
             color="primary"
             onClick={handleSendMessage}
