@@ -49,9 +49,14 @@ const Navbar = () => {
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex-shrink-0 cursor-pointer" onClick={()=>navigate('/')} >
-            <h1 className="text-2xl font-bold text-customBlue">connect.</h1>
-          </div>
+          <div
+  className="flex items-center gap-2 cursor-pointer"
+  onClick={() => navigate('/')}
+>
+  <img src="/logo.svg" alt="logo" className="w-8 h-8" />
+  <h1 className="text-2xl font-bold text-customBlue">connect.</h1>
+</div>
+
 
           {/* Desktop Menu */}
           <div className="hidden md:flex md:items-center md:space-x-2">
