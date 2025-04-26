@@ -169,7 +169,7 @@ const ChatArea = ({ chatUser }) => {
         <Box sx={{ display: 'flex', alignItems: 'center', borderTop: '1px solid #ccc', padding: 1 }}>
           <TextField
             fullWidth
-            variant="outlined"
+            variant="contained"
             placeholder="Type a message..."
             value={newMessage}
             onChange={(e) => setNewMessage(e.target.value)}
