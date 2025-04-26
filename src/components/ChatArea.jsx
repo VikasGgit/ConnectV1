@@ -96,7 +96,7 @@ const ChatArea = ({ chatUser }) => {
 
 
   return (
-    <div className={`fixed top-30 right-4 z-100 ${chatView ? "slide-in-right" : "slide-out-right"}`}>
+    <div className={`fixed top-28 right-4 z-[58] ${chatView ? "slide-in-right" : "slide-out-right"}`}>
 
       <Box sx={{ display: 'flex', flexDirection: 'column', height: '500px', width: '400px', border: '1px solid #ccc', borderRadius: 2 }}>
         {/* Header */}
