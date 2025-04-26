@@ -32,7 +32,7 @@ const NotificationIcon = () => {
     (state) => state.notificationReducer
   );
 
-  console.log("items", items, 'status', status)
+  // console.log("items", items, 'status', status)
   const open = Boolean(anchorEl);
 
   const handleClick = (event) => {
@@ -180,9 +180,9 @@ const NotificationIcon = () => {
                         sx={{ mt: 1 }}
                         onClick={(e) => {
                           e.stopPropagation();
-                          console.log("notification users", notification)
+                          // console.log("notification users", notification)
                            handleAccept(user_id?._id, _id)
-                          console.log("Accepting connection from", user_id?._id);
+                          // console.log("Accepting connection from", user_id?._id);
                         }}
                       >
                         Accept

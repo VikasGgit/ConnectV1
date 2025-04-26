@@ -19,7 +19,7 @@ const ChatArea = ({ chatUser }) => {
   const [newMessage, setNewMessage] = useState('');
   const messagesEndRef = useRef(null);
   const dyParams = useParams();
-  console.log(dyParams);
+  // console.log(dyParams);
   const [chat_id, chat_user] = dyParams.id?.split('&');
   const [loading, setLoading] = useState(true);
   const userData = JSON.parse(localStorage.getItem("userData"));
@@ -28,7 +28,7 @@ const ChatArea = ({ chatUser }) => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
 
-  console.log("message ynha hai guru", messages);
+  // console.log("message ynha hai guru", messages);
 
 
   const handleSendMessage = () => {
@@ -45,7 +45,7 @@ const ChatArea = ({ chatUser }) => {
     };
 
     axios.post(`${api}/message/`,  message , config).then((response) => {
-      console.log("Message sent successfully", response.data);
+      // console.log("Message sent successfully", response.data);
       socket.emit("newMessage", response.data);
     });
   };
@@ -53,16 +53,16 @@ const ChatArea = ({ chatUser }) => {
   //Initialization
   useEffect(() => {
     socket.on("connect", () => {
-      console.log("connected", socket.id);
+      // console.log("connected", socket.id);
   
     });
-    console.log("userData through socket", userData);
+    // console.log("userData through socket", userData);
     socket.emit("setup", userData?.user?._id);
   }, []);
   
   useEffect(() => {
     socket.on("new message", (newMessage) => {
-      console.log("new message", newMessage);
+      // console.log("new message", newMessage);
       setMessages((prevMessages) => [...prevMessages, newMessage]);
     });
 
@@ -83,12 +83,12 @@ const ChatArea = ({ chatUser }) => {
       }
     };
     axios.get(`${api}/message/` + chat_id, config).then(({ data }) => {
-      console.log("data", data);
+      // console.log("data", data);
       setMessages(data);
       setLoading(false);
       socket.emit("join chat", chat_id);
     }).catch((error) => {
-      console.log("Error fetching messages:", error);
+      // console.log("Error fetching messages:", error);
     });
   }, []);
   const nav = useNavigate();

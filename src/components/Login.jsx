@@ -30,7 +30,7 @@ const Login = () => {
             try {
                 userData = JSON.parse(localStorage.getItem("userData"));
             } catch (error) {
-                console.error("Error parsing user data", error);
+                // console.error("Error parsing user data", error);
                 userData = null;
             }
             if (userData) {
@@ -38,7 +38,7 @@ const Login = () => {
                     await dispatch(login(userData));
                     navigate("/welcome", { replace: true });
                 } catch (error) {
-                    console.error("Dispatching login failed", error);
+                    // console.error("Dispatching login failed", error);
                     setLoading(false);
                 }
             } else {
@@ -78,7 +78,7 @@ const Login = () => {
             await dispatch(login(response?.data));
             navigate("/welcome");
         } catch (error) {
-            console.error("Login failed", error);
+            // console.error("Login failed", error);
             
             if (error.response) {
                 switch (error.response.status) {

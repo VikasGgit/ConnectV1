@@ -264,7 +264,7 @@ const Profile = () => {
                     }
                 );
     
-                console.log("Upload Success:", response.data);
+                // console.log("Upload Success:", response.data);
                 sUserData(response?.data?.user);
                 let d = JSON.parse(localStorage.getItem('userData'));
                 d.user = response?.data?.user;
@@ -276,7 +276,7 @@ const Profile = () => {
                 toast.success('Profile picture updated successfully!');
             });
         } catch (error) {
-            console.error("Crop/Upload error:", error);
+            // console.error("Crop/Upload error:", error);
             setIsUploading(false);
             setUploadProgress(0);
             toast.error('Failed to upload profile picture');
@@ -298,7 +298,7 @@ const Profile = () => {
                     config
                 );
                 
-                console.log("userData details", response.data)
+                // console.log("userData details", response.data)
                 setUserData(response.data.userDetails);
                 sUserData(response?.data?.userDetails)
                 let d = JSON.parse(localStorage.getItem('userData'));
@@ -306,7 +306,7 @@ const Profile = () => {
                 localStorage.setItem('userData', JSON.stringify(d));
                 setProfilePhoto(response?.data?.userDetails?.picture || Photo);
             } catch (error) {
-                console.error("Error fetching user details:", error);
+                // console.error("Error fetching user details:", error);
                 toast.error("Error in fetching User Details, Please Login Again");
             } finally {
                 setLoading(false);
@@ -459,7 +459,7 @@ const Profile = () => {
                                                         toast.success('Successfully Deleted');
                                                         dispatch(ref());
                                                     } catch (error) {
-                                                        console.log(error);
+                                                        // console.log(error);
                                                         toast.warning("Failed to delete");
                                                     } finally {
                                                         setLoading(false);
@@ -547,7 +547,7 @@ const Profile = () => {
                                                         toast.success('Successfully Deleted');
                                                         dispatch(ref());
                                                     } catch (error) {
-                                                        console.log(error);
+                                                        // console.log(error);
                                                         toast.warning("Failed to delete");
                                                     } finally {
                                                         setLoading(false);
@@ -640,7 +640,7 @@ const Profile = () => {
                                                         toast.success('Successfully Deleted');
                                                         dispatch(ref());
                                                     } catch (error) {
-                                                        console.log(error);
+                                                        // console.log(error);
                                                         toast.warning("Failed to delete");
                                                     } finally {
                                                         setLoading(false);

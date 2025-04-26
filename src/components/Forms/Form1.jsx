@@ -78,10 +78,10 @@ const Form1 = () => {
         navigate(-1);
       } catch (error) {
         setLoading(false);
-        console.error('Error in updating details', error);
+        // console.error('Error in updating details', error);
         if (error.response) {
-          console.error('Response data', error.response.data);
-          console.error('Response status', error.response.status);
+          // console.error('Response data', error.response.data);
+          // console.error('Response status', error.response.status);
         }
       }
     } else {

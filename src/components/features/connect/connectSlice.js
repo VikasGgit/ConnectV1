@@ -24,7 +24,7 @@ export const allUser = createAsyncThunk(
       );
       return res.data;
     } catch (err) {
-      console.log("refa", err);
+      // console.log("refa", err);
       return rejectWithValue(err.response?.data?.message || err.message);
     }
   }
@@ -42,7 +42,7 @@ export const acceptConnection = createAsyncThunk(
       );
       return res.data;
     } catch (err) {
-      console.log("Error accepting connection:", err);
+      // console.log("Error accepting connection:", err);
       return rejectWithValue(err.response?.data?.message || err.message);
     }
   }
@@ -60,7 +60,7 @@ export const ConnectReq = createAsyncThunk(
       );
       return res.data;
     } catch (err) {
-      console.log("refa", err);
+      // console.log("refa", err);
       return rejectWithValue(err.response?.data?.message || err.message);
     }
   }

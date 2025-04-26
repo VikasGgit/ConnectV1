@@ -57,7 +57,7 @@ const UserContainer = () => {
         }
     }
 
-    console.log("converstation ", conversations);
+    // console.log("converstation ", conversations);
 
     const postHandler = () => {
         navigate(`/post/${userData.user._id}`);
@@ -74,7 +74,7 @@ const UserContainer = () => {
         } else {
             if (!loginStatus) {
                 toast.success("Login success!");
-                console.log("userData", userData);
+                // console.log("userData", userData);
                 dispatch(login(userData));
             }
         }

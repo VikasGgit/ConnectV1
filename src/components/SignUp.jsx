@@ -53,7 +53,7 @@ const SignUp = () => {
   // console.log(data);
   
   const signupHandler = async (e) => {
-    console.log("1");
+    // console.log("1");
     e.preventDefault();
     if (
       data.cpassword === data.password &&
@@ -66,7 +66,7 @@ const SignUp = () => {
     ) {
       dispatch(userData(data));
       setLoading(true); // Start loading
-      console.log("2");
+      // console.log("2");
       try {
         const config = {
           headers: {
@@ -97,7 +97,7 @@ const SignUp = () => {
     } else {
       // Toast or error message for validation failure
       alert("Please fill all fields correctly...");
-      console.error("Please fill all fields correctly or ensure passwords match.");
+      // console.error("Please fill all fields correctly or ensure passwords match.");
     }
   };
 

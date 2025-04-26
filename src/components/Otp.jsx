@@ -34,7 +34,7 @@ const Otp = () => {
                 role,
                 otp
             }
-            console.log(payload);
+            // console.log(payload);
             setloading(true);
             const config ={
                 headers:{
@@ -42,7 +42,7 @@ const Otp = () => {
                 }
             }
             const response = await axios.post(`${api}//user_signup`, payload, config);
-            console.log("signup response:", response);
+            // console.log("signup response:", response);
             setloading(false);
             toast.success('successfully registered');
             localStorage.setItem("userData", JSON.stringify(response.data));
@@ -53,10 +53,10 @@ const Otp = () => {
             navigate("/welcome");
         }catch(error){
             setloading(false);
-            console.error("Error in signup");
+            // console.error("Error in signup");
             if(error.response){
-                console.error('Response data', error.response.data);
-                console.error('Response status', error.response.status);
+                // console.error('Response data', error.response.data);
+                // console.error('Response status', error.response.status);
                 let errorMsg = 'Error signin up. Please try again later';
                 if(error.response.status === 400){
                     toast.warning("Invalid Otp");

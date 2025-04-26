@@ -77,7 +77,7 @@ const SkillsForm = () => {
       dispatch(ref());
       navigate(-1);
     } catch (error) {
-      console.error('Error:', error);
+      // console.error('Error:', error);
       toast.error(error.response?.data?.message || 'Something went wrong');
     } finally {
       setLoading(false);

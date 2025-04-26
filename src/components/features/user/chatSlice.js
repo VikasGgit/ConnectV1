@@ -20,7 +20,7 @@ export const loadChat = createAsyncThunk(
       );
       return res.data;
     } catch (err) {
-      console.log("refa", err);
+      // console.log("refa", err);
       return rejectWithValue(err.response?.data?.message || err.message);
     }
   }

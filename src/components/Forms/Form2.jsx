@@ -47,7 +47,7 @@ const EducationForm = () => {
             });
           }
         } catch (error) {
-          console.error("Error fetching education data:", error);
+          // console.error("Error fetching education data:", error);
         } finally {
           setLoading(false);
         }
@@ -88,13 +88,13 @@ const EducationForm = () => {
       const method = axios.put;
 
       const res=await method(url, formData, config);
-      console.log("resss", res)
+      // console.log("resss", res)
       // dispatch(sUserData(res?.data?.user))
       toast.success('Education successfully updated');
       dispatch(ref());
       navigate(-1);
     } catch (error) {
-      console.error('Error:', error);
+      // console.error('Error:', error);
       toast.error(error.response?.data?.message || 'Something went wrong');
     } finally {
       setLoading(false);
