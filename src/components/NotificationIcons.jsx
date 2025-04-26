@@ -46,16 +46,17 @@ const NotificationIcon = () => {
     setAnchorEl(null);
   };
 
-  const handleNotificationClick = (notificationId) => {
+  const handleNotificationClick = async(notificationId) => {
     if (!items.find(n => n._id === notificationId)?.read) {
 
+      await dispatch(fetchNotifications())
       dispatch(markNotificationRead(notificationId));
 
     }
   };
   const handleAccept = async (reqId, notificationId ) => {
     if (!items.find(n => n._id === notificationId)?.read) {
-     await dispatch(markNotificationRead(notificationId))
+      await dispatch(markNotificationRead(notificationId))
     }
      await dispatch(acceptConnection({ reqId }));
    await dispatch(loadChat())
@@ -154,7 +155,7 @@ const NotificationIcon = () => {
                       flexDirection: 'column',
                       alignItems: 'flex-start'
                     }}
-                    // onClick={() => handleNotificationClick(_id)}
+                    onClick={() => handleNotificationClick(_id)}
                   >
                     <ListItemText
                       primary={message}
