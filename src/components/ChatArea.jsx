@@ -166,7 +166,7 @@ const ChatArea = ({ chatUser }) => {
         </Box>
 
         {/* Input Field */}
-        <Box sx={{ display: 'flex', alignItems: 'center', borderTop: '1px solid #ccc', padding: 1 }}>
+        <Box sx={{ display: 'flex', alignItems: 'center', borderTop: 'solid #ccc', padding: 1 }}>
           {/* <TextField
             fullWidth
             variant="filled"
