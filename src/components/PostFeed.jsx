@@ -38,6 +38,7 @@ import {
   clearPostError,
   clearFeedError
 } from './features/post/postSlice';
+import { SOCKET_API as scket , API_URL as api, } from "../config/variable";
 
 const PostFeed = () => {
   const theme = useTheme();

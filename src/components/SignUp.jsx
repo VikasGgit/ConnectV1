@@ -8,6 +8,8 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 import { useDispatch } from 'react-redux';
 import { userData } from './features/user/userSlice';
+import { SOCKET_API as scket , API_URL as api, } from "../config/variable";
+
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -51,6 +53,7 @@ const SignUp = () => {
   // console.log(data);
   
   const signupHandler = async (e) => {
+    console.log("1");
     e.preventDefault();
     if (
       data.cpassword === data.password &&
@@ -63,7 +66,7 @@ const SignUp = () => {
     ) {
       dispatch(userData(data));
       setLoading(true); // Start loading
-
+      console.log("2");
       try {
         const config = {
           headers: {
