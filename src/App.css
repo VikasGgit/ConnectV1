@@ -2,6 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Add to your global styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  width: 100%;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 :root {
   --primary-color: #6C63FF;
 
