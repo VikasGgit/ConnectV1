@@ -172,7 +172,7 @@ const UserConnectModal = ({ open, handleClose, currentUserId }) => {
             {filteredUsers?.map((user) => {
               const connectionStatus = getConnectionStatus(user._id);
               return (
-                <React.Fragment key={user._id} onClick={()=>{navigate(`/userProfile/${user._id}`)}} >
+                <React.Fragment key={user._id}  >
                   <ListItem
                     secondaryAction={renderButton(
                       user?.isPending ? 'pending' : connectionStatus,
@@ -180,6 +180,8 @@ const UserConnectModal = ({ open, handleClose, currentUserId }) => {
                       user.firstName,
                       user.lastName
                     )}
+                      className="rounded-md cursor-pointer hover:bg-blue-200"
+                    onClick={()=>{navigate(`/userProfile/${user._id}`)}}
                   >
                     <ListItemAvatar className='mr-2 border-black' >
                     {user.picture ?(  <Avatar 
