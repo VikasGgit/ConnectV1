@@ -304,7 +304,7 @@ const Navbar = () => {
               </>
             )}
             {!loginStatus ? (
-              <>
+              <div className='flex gap-2'>
                 <Button
                   variant="contained"
                   onClick={changeLogin}
@@ -319,7 +319,7 @@ const Navbar = () => {
                 <Button variant="outlined" onClick={changeSignup}>
                   Sign Up
                 </Button>
-              </>
+              </div>
             ) : (
               <div
                 className="relative flex items-center space-x-2"
