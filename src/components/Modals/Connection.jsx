@@ -180,7 +180,7 @@ const UserConnectModal = ({ open, handleClose, currentUserId }) => {
                       user.lastName
                     )}
                   >
-                    <ListItemAvatar className='mr-2 border-r-teal-200' >
+                    <ListItemAvatar className='mr-2 border-black' >
                     {user.picture ?(  <Avatar 
                         src={user.picture} 
                         sx={{ width: isMobile ? 40 : 56, height: isMobile ? 40 : 56 }}
@@ -195,7 +195,7 @@ const UserConnectModal = ({ open, handleClose, currentUserId }) => {
                         variant: isMobile ? 'body1' : 'subtitle1',
                         fontWeight: 'medium'
                       }}
-                      secondary={`${user.education[0]?.collegeName || ''} ${user.education[0]?.degree || ''}`}
+                      secondary={`${user.education[0]?.collegeName || 'Hey I love using connect'} || ${user.education[0]?.degree || 'connect.'}`}
                       secondaryTypographyProps={{
                         variant: isMobile ? 'caption' : 'body2',
                         noWrap: isMobile,
