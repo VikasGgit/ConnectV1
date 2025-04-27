@@ -1588,11 +1588,11 @@ const FeatureShowcase = () => {
   const demoAccounts = [
     {
       email: "Vikas.college001@gmail.com",
-      password: "Test@123"
+      password: "Test@1234"
     },
     {
       email: "shivsrivas123456@gmail.com",
-      password: "Test@123"
+      password: "Adarsh@1234"
     }
   ];
 

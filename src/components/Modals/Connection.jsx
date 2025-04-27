@@ -224,12 +224,12 @@ const ConnectionModal = ({ currentUserId, text }) => {
 
   return (
     <>
-      <IconButton  color="inherit"
+<IconButton 
   onClick={() => setOpen(true)} 
-  size={isMobile ? 'small' : 'medium'}
-  
+  sx={text ? { gap: 1.5  } : {}}
 >
-  <PeopleOutlineOutlinedIcon fontSize={isMobile ? 'small' : 'medium' } className="mr-3"/>
+
+  <PeopleOutlineOutlinedIcon fontSize={isMobile ? 'small' : 'medium' } />
   <span className='text-sm' >{text}</span>
 </IconButton>
 

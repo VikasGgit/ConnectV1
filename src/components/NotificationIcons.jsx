@@ -79,7 +79,7 @@ const NotificationIcon = ({text}) => {
           <span>{text}</span>
         </Badge>
       </IconButton> */}
-    <IconButton color="inherit" onClick={handleClick} >
+    <IconButton   sx={text ? { gap: 1.5 } : {}} onClick={handleClick}  >
   <Badge 
     badgeContent={unreadCount} 
     color="error" 
@@ -89,7 +89,7 @@ const NotificationIcon = ({text}) => {
     <NotificationsIcon   />
     
   </Badge>
-  <span className='ml-3 text-sm' >{text}</span>
+  <span className='text-sm ' >{text}</span>
 </IconButton>
 
 

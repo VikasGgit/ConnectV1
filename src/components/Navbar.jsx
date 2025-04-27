@@ -287,13 +287,13 @@ const Navbar = () => {
 
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex md:items-center md:space-x-2">
+          <div className="hidden md:flex md:items-center">
             <IconButton>
               <WorkOutlineOutlinedIcon />
             </IconButton>
-            <IconButton>
+            
               <ConnectionModal currentUserId={userData?.user?._id} />
-            </IconButton>
+            
             <IconButton>
               <NewspaperOutlinedIcon />
             </IconButton>
@@ -389,7 +389,7 @@ const Navbar = () => {
             <div className="px-4 py-2 space-y-2">
               {/* Mobile Menu Items - Vertical Layout */}
               <div className="flex flex-col space-y-3">
-                <div className="flex items-center px-2 py-2 text-gray-700 rounded hover:bg-gray-100">
+                <div className="flex items-center px-2 py-2 text-gray-500 rounded hover:bg-gray-100">
                   <WorkOutlineOutlinedIcon className="mr-3" />
                   <span className='text-sm'>Jobs</span>
                 </div>
@@ -399,7 +399,7 @@ const Navbar = () => {
                   
                 </div>
 
-                <div className="flex items-center px-2 py-2 text-gray-700 rounded hover:bg-gray-100">
+                <div className="flex items-center px-2 py-2 text-gray-500 rounded hover:bg-gray-100">
                   <NewspaperOutlinedIcon className="mr-3" />
                   <span className='text-sm'>News</span>
                 </div>

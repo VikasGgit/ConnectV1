@@ -95,7 +95,7 @@ const PostFeed = () => {
   };
 
   // Redux state
-  const {
+  const { 
     feed: {
       data: posts,
       page: currentPage,
@@ -107,6 +107,7 @@ const PostFeed = () => {
     error: postError
   } = useSelector((state) => state.postReducer);
 
+  
   // Error states
   const [errorSnackbar, setErrorSnackbar] = useState({
     open: false,
@@ -117,6 +118,7 @@ const PostFeed = () => {
   useEffect(() => {
     if(userId)
     dispatch(fetchFeedPosts({ userId, page, limit }));
+    console.log("feed", posts)
   }, [dispatch, userId, page, limit]);
 
   // Handle errors

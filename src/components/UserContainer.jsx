@@ -95,7 +95,7 @@ const UserContainer = () => {
             {/* Desktop Layout */}
             {!isMobile && (
                 <>
-                    <div className='relative user-profile bg-white rounded-xl shadow-xl border border-gray-100 transition-all duration-300 hover:shadow-2xl hover:scale-[1.01] h-screen'>
+                    <div className='relative user-profile bg-white rounded-xl shadow-xl border border-gray-100 transition-all duration-300 hover:shadow-2xl hover:scale-[1.01] h-min'>
                         {/* Wave Design Header */}
                         <div className="relative h-32 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-xl">
                             <div className="custom-shape-divider-top-1733409435">
@@ -247,7 +247,7 @@ const UserContainer = () => {
                         {/* Content Area */}
                         <div className='p-4'>
                             {toggle === 2 && (
-                                <div className='space-y-3 max-h-[500px] overflow-y-auto custom-scrollbar'>
+                                <div className='space-y-3 max-h-[500px] h-min overflow-y-auto custom-scrollbar'>
                                     {conversations.map((conversation, index) => {
                                         let chatName = "";
                                         conversation.users.forEach((user) => {
