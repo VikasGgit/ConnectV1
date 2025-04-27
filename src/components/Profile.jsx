@@ -411,7 +411,7 @@ const Profile = () => {
                     <div className="flex justify-between">
                       <div className="flex gap-4">
                         <Avatar
-                          src={Mmmut}
+                          src='/logo.svg'
                           alt="College"
                           sx={{ width: 60, height: 60 }}
                           variant="rounded"
@@ -624,7 +624,7 @@ const Profile = () => {
                     <div className="flex justify-between">
                       <div className="flex gap-4">
                         <Avatar
-                          src={Tech}
+                          src='/logo.svg'
                           alt="Volunteering"
                           sx={{ width: 60, height: 60 }}
                           variant="rounded"
