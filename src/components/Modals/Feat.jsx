@@ -1584,7 +1584,6 @@ const FeatureShowcase = () => {
       tech: ["MongoDB", "Redux"]
     }
   ];
-
   const demoAccounts = [
     {
       email: "Vikas.college001@gmail.com",
@@ -1595,7 +1594,6 @@ const FeatureShowcase = () => {
       password: "Adarsh@1234"
     }
   ];
-
   const creators = [
     {
       name: "Vikas Gupta",
