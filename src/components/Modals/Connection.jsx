@@ -22,6 +22,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { ConnectReq, allUser, acceptConnection } from '../features/connect/connectSlice';
 import { fetchNotifications } from '../features/connect/notificationSlice';
 import { loadChat, refc } from '../features/user/chatSlice';
+import { useNavigate } from 'react-router-dom';
 
 const userData = JSON.parse(localStorage.getItem("userData"));
 
@@ -35,7 +36,7 @@ const UserConnectModal = ({ open, handleClose, currentUserId }) => {
   let { loading, error, users, acceptLoading } = useSelector(state => state.connectionReducer)
   const { items } = useSelector(state => state.notificationReducer)
   const dispatch = useDispatch();
-
+  const navigate=useNavigate();
   const style = {
     position: 'absolute',
     top: '50%',
@@ -171,7 +172,7 @@ const UserConnectModal = ({ open, handleClose, currentUserId }) => {
             {filteredUsers?.map((user) => {
               const connectionStatus = getConnectionStatus(user._id);
               return (
-                <React.Fragment key={user._id}>
+                <React.Fragment key={user._id} onClick={()=>{navigate(`/userProfile/${user._id}`)}} >
                   <ListItem
                     secondaryAction={renderButton(
                       user?.isPending ? 'pending' : connectionStatus,

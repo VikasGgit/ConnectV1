@@ -20,6 +20,7 @@ import PostFeed from './components/PostFeed';
 import { NotificationManager } from './components/NotificationManager';
 import ChatArea from './components/ChatArea';
 import FeatureShowcase from './components/Modals/Feat';
+import UserProfileView from './components/UserProfileView';
 function App() {
   console.log("app component re-renders")
 
@@ -31,6 +32,7 @@ function App() {
                <Route path='/features' element={<FeatureShowcase/>}/>
                <Route path='/' element={<Maincontainer/>}>
                  <Route index element={<Home/>}/>
+                 <Route path='/userProfile/:userId' element={<UserProfileView/>}/>
                  <Route path='login' element={<Login/>}/>
                  <Route path='signup' element={<SignUp/>}/>
                  <Route path='otp' element={<Otp/>}/>

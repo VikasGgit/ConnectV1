@@ -171,9 +171,11 @@ import {
 } from '../features/connect/connectSlice';
 import { fetchNotifications } from '../features/connect/notificationSlice';
 import { loadChat } from '../features/user/chatSlice';
+import { useNavigate } from 'react-router-dom';
 
 const ConnectUserList = ({ currentUserId }) => {
   const dispatch = useDispatch();
+  const navigate= useNavigate();
   const [search, setSearch] = useState('');
   const [filteredUsers, setFilteredUsers] = useState([]);
   const [loadingStates, setLoadingStates] = useState({});
@@ -273,6 +275,7 @@ const ConnectUserList = ({ currentUserId }) => {
         return (
           <div
             key={user._id}
+            onClick={()=>{navigate(`/userProfile/${user._id}`)}}
             className="flex items-center justify-between gap-3 p-3 mb-3 transition-all duration-200 rounded-lg shadow-sm hover:shadow-md bg-blue-50 hover:bg-blue-100"
           >
             <div className="flex items-center flex-1 min-w-0 gap-3">
