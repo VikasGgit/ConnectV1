@@ -64,12 +64,13 @@ const MainContent = styled("div")({
 });
 
 const Sidebar = styled("div")({
+  marginTop:'50px',
   width: "100%",
   order: 2, // Sidebar after main content on mobile
   "@media (min-width: 900px)": {
-    width: "320px",
+    width: "370px",
     position: "sticky",
-    top: "80px",
+    // top: "80px",
     order: 1, // Change order for desktop if needed
   },
 });

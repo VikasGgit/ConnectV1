@@ -225,7 +225,7 @@ const ConnectionModal = ({ currentUserId }) => {
   return (
     <>
       <IconButton onClick={() => setOpen(true)} size={isMobile ? 'small' : 'medium'}>
-        <PeopleOutlineOutlinedIcon fontSize={isMobile ? 'medium' : 'large'} />
+        <PeopleOutlineOutlinedIcon fontSize={isMobile ? 'small' : 'medium'} />
       </IconButton>
       <UserConnectModal 
         open={open} 

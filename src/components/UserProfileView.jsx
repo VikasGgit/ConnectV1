@@ -561,8 +561,7 @@ const UserProfileView = () => {
         setUserData(response.data.userDetails);
         
         // Check connection status
-        const connectionRes = await axios.get(`${api}/connection/status/${userId}`, config);
-        setConnectionStatus(connectionRes.data.status);
+        
       } catch (error) {
         console.error("Error fetching user profile:", error);
         toast.error("Failed to load user profile");
@@ -684,7 +683,7 @@ const UserProfileView = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
               >
-                <ProfilePicture src={userData.picture || Photo} alt="Profile" />
+                <ProfilePicture src={userData.picture || '/logo.svg'} alt="Profile" />
               </motion.div>
             </ProfilePictureContainer>
 
@@ -708,7 +707,7 @@ const UserProfileView = () => {
                   <span className="text-lg font-semibold">
                     {userData?.status?.organization}
                   </span>
-                  {connectionStatus === "connected" ? (
+                  {/* {connectionStatus === "connected" ? (
                     <Button variant="contained" color="success" disabled>
                       Connected
                     </Button>
@@ -730,7 +729,7 @@ const UserProfileView = () => {
                         "Connect"
                       )}
                     </Button>
-                  )}
+                  )} */}
                 </div>
               </motion.div>
             </ProfileInfo>
@@ -753,7 +752,7 @@ const UserProfileView = () => {
                 >
                   <div className="flex gap-4">
                     <Avatar
-                      src={Mmmut}
+                      src='/logo.svg'
                       alt="College"
                       sx={{ width: 60, height: 60 }}
                       variant="rounded"
@@ -845,7 +844,7 @@ const UserProfileView = () => {
                 >
                   <div className="flex gap-4">
                     <Avatar
-                      src={Tech}
+                      src='/logo.svg'
                       alt="Volunteering"
                       sx={{ width: 60, height: 60 }}
                       variant="rounded"
