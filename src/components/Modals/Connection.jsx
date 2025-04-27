@@ -181,10 +181,13 @@ const UserConnectModal = ({ open, handleClose, currentUserId }) => {
                     )}
                   >
                     <ListItemAvatar>
-                      <Avatar 
+                    {user.picture ?(  <Avatar 
                         src={user.picture} 
                         sx={{ width: isMobile ? 40 : 56, height: isMobile ? 40 : 56 }}
-                      />
+                      />) : (  <Avatar 
+                        src='/logo.svg' 
+                        sx={{ width: isMobile ? 40 : 56, height: isMobile ? 40 : 56 }}
+                      />)}
                     </ListItemAvatar>
                     <ListItemText
                       primary={`${user.firstName} ${user.lastName}`}
