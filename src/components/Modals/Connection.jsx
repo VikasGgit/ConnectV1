@@ -180,7 +180,7 @@ const UserConnectModal = ({ open, handleClose, currentUserId }) => {
                       user.lastName
                     )}
                   >
-                    <ListItemAvatar>
+                    <ListItemAvatar className='mr-2' >
                     {user.picture ?(  <Avatar 
                         src={user.picture} 
                         sx={{ width: isMobile ? 40 : 56, height: isMobile ? 40 : 56 }}
