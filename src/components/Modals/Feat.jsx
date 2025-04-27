@@ -940,7 +940,7 @@ const FeatureShowcase = () => {
       education: "B.Tech",
       bio: "EXPERT MERN SQL JAVASCRIPT C++ DSA ",
       image: vikasImage,
-      link: "/profile/vikas"
+      link: "/"
     },
     {
       name: "Adarsh Srivastava",
@@ -948,7 +948,7 @@ const FeatureShowcase = () => {
       education: "B.Tech ",
       bio: "Expert in MERN SQL , and building robust backend systems.",
       image: adarshImage,
-      link: "/profile/adarsh"
+      link: "/" 
     }
   ];
 
