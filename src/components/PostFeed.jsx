@@ -224,7 +224,7 @@ const PostFeed = () => {
           <CardHeader
             avatar={
               <Avatar 
-                src={post.user?.picture} 
+                src={post.user?.picture || "/logo.svg"} 
                 alt={`${post.user?.firstName} ${post.user?.lastName}`}
               />
             }
@@ -330,7 +330,7 @@ const PostFeed = () => {
               {post.comments?.map((comment) => (
                 <Box key={comment._id} sx={{ display: 'flex', mb: 2 }}>
                   <Avatar 
-                    src={comment.user?.picture} 
+                    src={comment.user?.picture || '/logo.svg'} 
                     sx={{ width: 32, height: 32, mr: 1 }} 
                   />
                   <Box>
@@ -340,12 +340,18 @@ const PostFeed = () => {
                       p: 1.5,
                       maxWidth: '80%'
                     }}>
-                      <Typography variant="subtitle2" fontWeight="medium">
+                      {/* <Typography variant="subtitle2" fontWeight="medium">
                         {comment.user?.firstName} {comment.user?.lastName}
                       </Typography>
                       <Typography variant="body2">
                         {comment.text}
-                      </Typography>
+                      </Typography> */}
+                      <Typography variant="body2">
+  <span style={{ fontWeight: 'bold' }}>
+    {comment.user?.firstName} {comment.user?.lastName}
+  </span>{" "}
+  {comment.text}
+</Typography>
                     </Box>
                     <Typography variant="caption" color="text.secondary" sx={{ ml: 1 }}>
                       {formatDistanceToNow(new Date(comment.createdAt), { addSuffix: true })}
