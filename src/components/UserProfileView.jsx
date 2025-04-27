@@ -383,7 +383,7 @@
 
 
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Navigate, useNavigate, useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import axios from "axios";
 import { toast } from "react-toastify";
@@ -538,6 +538,7 @@ const SkillChip = styled(Chip)({
 });
 
 const UserProfileView = () => {
+  const navigate=useNavigate();
   const { userId } = useParams();
   const { token } = useSelector((state) => state.status);
   const [userData, setUserData] = useState(null);
@@ -546,6 +547,8 @@ const UserProfileView = () => {
   const [connectionLoading, setConnectionLoading] = useState(false);
 
   useEffect(() => {
+    if(!token){ navigate('/') 
+    return;}
     const fetchUserProfile = async () => {
       try {
         setLoading(true);
