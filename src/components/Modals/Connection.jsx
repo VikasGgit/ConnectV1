@@ -217,21 +217,28 @@ const UserConnectModal = ({ open, handleClose, currentUserId }) => {
   );
 };
 
-const ConnectionModal = ({ currentUserId }) => {
+const ConnectionModal = ({ currentUserId, text }) => {
   const [open, setOpen] = useState(false);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
     <>
-      <IconButton onClick={() => setOpen(true)} size={isMobile ? 'small' : 'medium'}>
-        <PeopleOutlineOutlinedIcon fontSize={isMobile ? 'small' : 'medium'} />
-      </IconButton>
-      <UserConnectModal 
-        open={open} 
-        handleClose={() => setOpen(false)} 
-        currentUserId={currentUserId} 
-      />
+      <IconButton  color="inherit"
+  onClick={() => setOpen(true)} 
+  size={isMobile ? 'small' : 'medium'}
+  
+>
+  <PeopleOutlineOutlinedIcon fontSize={isMobile ? 'small' : 'medium' } className="mr-3"/>
+  <span className='text-sm' >{text}</span>
+</IconButton>
+
+<UserConnectModal 
+  open={open} 
+  handleClose={() => setOpen(false)} 
+  currentUserId={currentUserId} 
+/>
+
     </>
   );
 };

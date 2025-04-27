@@ -25,7 +25,7 @@ import { acceptConnection } from './features/connect/connectSlice';
 import { allUser } from './features/connect/connectSlice';
 import {loadChat, refc} from './features/user/chatSlice';
 
-const NotificationIcon = () => {
+const NotificationIcon = ({text}) => {
   const [anchorEl, setAnchorEl] = useState(null);
   const dispatch = useDispatch();
   const { items, unreadCount, status, error } = useSelector(
@@ -73,11 +73,25 @@ const NotificationIcon = () => {
 
   return (
     <>
-      <IconButton color="inherit" onClick={handleClick}>
+      {/* <IconButton color="inherit" onClick={handleClick}>
         <Badge badgeContent={unreadCount} color="error" max={99}>
           <NotificationsIcon />
+          <span>{text}</span>
         </Badge>
-      </IconButton>
+      </IconButton> */}
+    <IconButton color="inherit" onClick={handleClick} >
+  <Badge 
+    badgeContent={unreadCount} 
+    color="error" 
+    max={99}
+   
+  >
+    <NotificationsIcon   />
+    
+  </Badge>
+  <span className='ml-3 text-sm' >{text}</span>
+</IconButton>
+
 
       <Popover
         open={open}

@@ -391,25 +391,25 @@ const Navbar = () => {
               <div className="flex flex-col space-y-3">
                 <div className="flex items-center px-2 py-2 text-gray-700 rounded hover:bg-gray-100">
                   <WorkOutlineOutlinedIcon className="mr-3" />
-                  <span>Jobs</span>
+                  <span className='text-sm'>Jobs</span>
                 </div>
 
                 <div className="flex items-center py-2 text-gray-700 rounded hover:bg-gray-100">
-                  <ConnectionModal currentUserId={userData?.user?._id} className="mr-3" />
-                  <span>Connections</span>
+                  <ConnectionModal currentUserId={userData?.user?._id} text={"Connections"} className="mr-3" />
+                  
                 </div>
 
                 <div className="flex items-center px-2 py-2 text-gray-700 rounded hover:bg-gray-100">
                   <NewspaperOutlinedIcon className="mr-3" />
-                  <span>News</span>
+                  <span className='text-sm'>News</span>
                 </div>
 
                 {loginStatus && (
                   <>
                     <div className="flex items-center py-2 text-gray-700 rounded hover:bg-gray-100">
                       <NotificationManager userId={userData?.user?._id} />
-                      <NotificationIcon />
-                      <span className='ml-1'>Notifications</span>
+                      <NotificationIcon text={"Notifications"} />
+
                     </div>
                   </>
                 )}
